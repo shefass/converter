@@ -1,11 +1,13 @@
 import React from "react";
-import Index from "./logic/index"
-
+import Index from "./logic/index";
+import Text from "./presentation/text";
 
 function App() {
   return (
-    
-    <Index />
+    <React.Fragment>
+      <Text />
+      <Index />
+    </React.Fragment>
   );
 }
 
