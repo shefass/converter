@@ -26,19 +26,20 @@ const Builder = ({
           value={inputHash}
           onChange={value => hendleInputHash(value)}
         />
-        <FormControl
-          placeholder="Amount, Burst"
-          aria-label="Amount"
-          aria-describedby="basic-addon2"
-          value={amount}
-          onChange={value => hendleInputAmount(value)}
-        />
+        
         <FormControl
           placeholder="Recipiant, numeric id"
           aria-label="Recipiant"
           aria-describedby="basic-addon2"
           value={numericId}
           onChange={value => hendleInputNumericId(value)}
+        />
+        <FormControl
+          placeholder="Amount, Burst"
+          aria-label="Amount"
+          aria-describedby="basic-addon2"
+          value={amount}
+          onChange={value => hendleInputAmount(value)}
         />
         <InputGroup.Append>
           <Button

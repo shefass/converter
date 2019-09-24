@@ -34,7 +34,7 @@ class ControlBuilder extends Component {
        let convertedAmount = decToHec(String(amount));
        let convertedNumericId = decToHec(this.state.numericId);
        let hash = decToHec(this.state.inputHash);
-       this.setState({ message: hash + convertedAmount + convertedNumericId})
+       this.setState({ message: hash + convertedNumericId + convertedAmount})
        
         
     }
@@ -43,12 +43,13 @@ class ControlBuilder extends Component {
         let hashHex = arrayMessage.slice(0, 16).join('');
         let hash = hecToDec(hashHex); 
         this.setState({ inputHash: hash})
-        let amauntString = arrayMessage.slice(16, 33).join('');
-        let amount = Number(hecToDec(amauntString))/100000000;
-        this.setState({amount: String(amount)}) 
-        let numericIdHex = arrayMessage.slice(32, 49).join('');
+        let numericIdHex = arrayMessage.slice(16, 33).join('');
         let numericId = hecToDec(numericIdHex);
         this.setState({numericId: numericId})
+        let amauntString = arrayMessage.slice(32, 49).join('');
+        let amount = Number(hecToDec(amauntString))/100000000;
+        this.setState({amount: String(amount)}) 
+       
         
         //697dc89417ff765900e40b54020000001acf3c5ef2907048
     }
