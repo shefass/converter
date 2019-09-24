@@ -33,14 +33,15 @@ class ControlBuilder extends Component {
        let amount = Number(this.state.amount) * 100000000;
        let convertedAmount = decToHec(String(amount));
        let convertedNumericId = decToHec(this.state.numericId);
-       let hash = this.state.inputHash;
+       let hash = decToHec(this.state.inputHash);
        this.setState({ message: hash + convertedAmount + convertedNumericId})
        
         
     }
     hendleGetData =()=> {
         let arrayMessage = this.state.message.split('');
-        let hash = arrayMessage.slice(0, 16).join(''); 
+        let hashHex = arrayMessage.slice(0, 16).join('');
+        let hash = hecToDec(hashHex); 
         this.setState({ inputHash: hash})
         let amauntString = arrayMessage.slice(16, 33).join('');
         let amount = Number(hecToDec(amauntString))/100000000;

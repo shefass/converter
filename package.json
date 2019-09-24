@@ -1,6 +1,6 @@
 {
   "name": "input-converter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://converter.blockplay.io",
   "private": true,
   "dependencies": {
