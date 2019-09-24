@@ -63,6 +63,7 @@ const Builder = ({
           </Button>
         </InputGroup.Append>
       </InputGroup>
+      <a href="https://github.com/shefass/converter" target="_blank" rel="noopener noreferrer">Source code</a>
     </Container>
   );
 };

@@ -12,6 +12,7 @@ const Index = () => {
     <Card className="m-2" bg="light">
       <Control />
       <ControlBuilder />
+      
     </Card>
   );
 };
